@@ -49,44 +49,36 @@
     
             
     
-            BuySmallPizza(){this.SmallPizzaTotal +=24.99;this.smallPizzaqty +=1},
-    
-            BuyMediumPizza(){this.MediumPizzaTotal +=34.99;this.mediumPizzaqty +=1},
-    
-            BuyLargePizza(){this.LargePizzaTotal +=64.99;this.largePizzaqty +=1},
-    
-           
-    
+            BuySmallPizza(){
+                this.SmallPizzaTotal +=24.99;this.smallPizzaqty +=1},
             ClearSmallPizza(){
-    
-                if(this.smallPizzaqty > 0){
-    
-            this.SmallPizzaTotal -=24.99;
-    
-            this.smallPizzaqty -=1}
-    
-        },
-    
-            ClearMediumPizza(){
-    
-                if(this.MediumPizzaqty > 0){
-    
-                this.MediumPizzaTotal -=34.99;
-    
-                this.mediumPizzaqty -=1}
-    
+                if (this.smallPizzaqty > 0){
+                    this.SmallPizzaTotal -= 29.00, this.smallPizzaqty -=1
+                }
             },
     
-            clearLargePizza(){
-    
-                if(this.largePizzaqty > 0){
-    
-                   this.LargePizzaTotal -=64.99;
-    
-                   this.largePizzaqty -=1}
-    
+            BuyMediumPizza(){
+                this.MediumPizzaTotal +=34.99;this.mediumPizzaqty +=1},
+
+                ClearMediumPizza(){
+                    if(this.mediumPizzaqty > 0){
+                    this.MediumPizzaTotal -=34.99;
+                    this.mediumPizzaqty -=1
+                }
                 },
     
+            BuyLargePizza(){
+                this.LargePizzaTotal +=64.99;this.largePizzaqty +=1},
+                clearLargePizza(){
+                    if(this.largePizzaqty > 0){
+                       this.LargePizzaTotal -=64.99;
+                       this.largePizzaqty -=1}
+                    },
+        
+    
+
+    
+            
                 makePayment() {
     
                     if (!this.paymentAmount){
